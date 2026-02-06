@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>HANDYSHOP MISTELBACH | iPhone & Samsung Reparatur</title>
+    <meta name="description" content="Schnelle iPhone & Samsung Reparatur in Mistelbach – Display, Akku, Wasserschaden meist in 30–60 Min. 12 Monate Garantie, hochwertige Teile.">
+    <meta name="theme-color" content="#0a0a0a">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --bg-dark: #111111;
+            --bg-darker: #080808;
+            --text: #e8e8e8;
+            --text-light: #a8a8a8;
+            --border: #222222;
+            --red: #e63946;
+            --gray: #181818;
+            --whatsapp: #25D366;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.55;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 clamp(16px, 4vw, 24px);
+        }
+
+        .top-bar {
+            background: var(--bg-dark);
+            padding: 12px 0;
+            font-size: clamp(0.85rem, 2vw, 0.94rem);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .top-bar .contact-info {
+            display: flex;
+            gap: clamp(16px, 4vw, 32px);
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .top-bar i {
+            margin-right: 8px;
+            opacity: 0.8;
+            color: var(--red);
+        }
+
+        .address-link {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .address-link:hover {
+            color: var(--red);
+        }
+
+        header {
+            background: var(--bg-darker);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: clamp(14px, 3vw, 18px) 0;
+            gap: 16px;
+        }
+        
+        .logo h1 {
+            font-size: clamp(1.6rem, 5vw, 2.1rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+        
+        .logo h2 {
+            font-size: clamp(0.85rem, 2vw, 0.98rem);
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: clamp(20px, 4vw, 36px);
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+            position: relative;
+            padding: 4px 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--red);
+            transition: width var(--transition-fast);
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: white;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .phone-btn {
+            background: var(--red);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .phone-btn:hover {
+            background: #d32f2f;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+        }
+        
+        .phone-btn:active {
+            transform: translateY(0);
+        }
+
+        /* === MOBILE MENU BUTTON === */
+        .mobile-menu-btn {
+            display: none;
+            width: 48px;
+            height: 48px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 1001;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        .mobile-menu-btn__lines {
+            position: absolute;
+            width: 28px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobile-menu-btn__line {
+            position: absolute;
+            width: 100%;
+            height: 2.5px;
+            background: white;
+            border-radius: 2px;
+            transition: all var(--transition-smooth);
+            left: 0;
+        }
+
+        .mobile-menu-btn__line:nth-child(1) { top: 0; }
+        .mobile-menu-btn__line:nth-child(2) { 
+            top: 50%; 
+            transform: translateY(-50%);
+            transition: width var(--transition-smooth), opacity var(--transition-fast);
+        }
+        .mobile-menu-btn__line:nth-child(3) { bottom: 0; }
+
+        .mobile-menu-btn[aria-expanded="true"] .mobile-menu-btn__line:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        
+        .mobile-menu-btn[aria-expanded="true"] .mobile-menu-btn__line:nth-child(2) {
+            width: 0;
+            opacity: 0;
+        }
+        
+        .mobile-menu-btn[aria-expanded="true"] .mobile-menu-btn__line:nth-child(3) {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+
+        /* === FULL SCREEN MOBILE MENU === */
+        .mobile-nav {
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s linear 0.4s, opacity 0.4s ease;
+        }
+
+        .mobile-nav.active {
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        .mobile-nav__backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(8, 8, 8, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-nav.active .mobile-nav__backdrop {
+            opacity: 1;
+        }
+
+        .mobile-nav__content {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 24px 40px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .mobile-nav__header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.3s ease 0.1s;
+        }
+
+        .mobile-nav.active .mobile-nav__header {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-nav__brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .mobile-nav__brand span {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .mobile-nav__links {
+            list-style: none;
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mobile-nav__item {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.4s ease;
+        }
+
+        .mobile-nav.active .mobile-nav__item:nth-child(1) { transition-delay: 0.15s; }
+        .mobile-nav.active .mobile-nav__item:nth-child(2) { transition-delay: 0.25s; }
+        .mobile-nav.active .mobile-nav__item:nth-child(3) { transition-delay: 0.35s; }
+
+        .mobile-nav.active .mobile-nav__item {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .mobile-nav__link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-radius: 16px;
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mobile-nav__link::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .mobile-nav__link:hover,
+        .mobile-nav__link:active {
+            background: rgba(255, 255, 255, 0.03);
+            transform: translateX(8px);
+        }
+
+        .mobile-nav__link:hover::before,
+        .mobile-nav__link:active::before {
+            opacity: 1;
+        }
+
+        .mobile-nav__link-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mobile-nav__link-arrow {
+            font-size: 1.2rem;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all var(--transition-fast);
+            color: var(--red);
+        }
+
+        .mobile-nav__link:hover .mobile-nav__link-arrow,
+        .mobile-nav__link:active .mobile-nav__link-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .mobile-nav__cta {
+            margin-top: 32px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease 0.55s;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .mobile-nav.active .mobile-nav__cta {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-nav__phone-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 20px 32px;
+            background: var(--red);
+            color: white;
+            text-decoration: none;
+            border-radius: 16px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: all var(--transition-fast);
+            box-shadow: 0 8px 32px rgba(230, 57, 70, 0.3);
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+            border: none;
+        }
+
+        .mobile-nav__phone-btn:hover,
+        .mobile-nav__phone-btn:active {
+            background: #d32f2f;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(230, 57, 70, 0.4);
+        }
+
+        .mobile-nav__phone-btn i {
+            font-size: 1.3rem;
+        }
+
+        .mobile-nav__footer {
+            margin-top: auto;
+            padding-top: 40px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease 0.65s;
+        }
+
+        .mobile-nav.active .mobile-nav__footer {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-nav__address-link {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+            display: inline-block;
+        }
+        
+        .mobile-nav__address-link:hover {
+            color: var(--red);
+        }
+
+        .mobile-nav__hours {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            opacity: 0.8;
+        }
+
+        /* === HERO === */
+        .hero {
+            padding: clamp(80px, 15vw, 120px) 0 clamp(60px, 10vw, 100px);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 5rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.05;
+        }
+        
+        .hero h2 {
+            font-size: clamp(1.1rem, 3vw, 1.6rem);
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+        
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: clamp(20px, 4vw, 40px) clamp(32px, 6vw, 64px);
+            margin: 40px 0 48px;
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+        }
+        
+        .hero-features .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .hero-features i {
+            color: var(--red);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-size: clamp(1rem, 2.5vw, 1.08rem);
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all var(--transition-fast);
+            min-width: 160px;
+            border: none;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .btn-primary {
+            background: var(--red);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #d32f2f;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1.5px solid #444;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin: clamp(60px, 12vw, 100px) 0 clamp(40px, 8vw, 60px);
+        }
+
+        .services-grid, .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        
+        @media (min-width: 768px) {
+            .services-grid, .contact-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .service-card, .contact-card {
+            background: var(--gray);
+            padding: clamp(32px, 6vw, 40px) clamp(20px, 4vw, 28px);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: all var(--transition-smooth);
+        }
+        
+        .service-card:hover, .contact-card:hover {
+            transform: translateY(-8px);
+            border-color: #444;
+        }
+        
+        .service-icon, .contact-icon {
+            font-size: clamp(2.8rem, 6vw, 3.4rem);
+            margin-bottom: 16px;
+            color: var(--red);
+        }
+        
+        .service-card h3, .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        
+        .service-card p, .contact-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .contact-card a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .contact-card a:hover {
+            color: var(--red);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 48px 0 32px;
+        }
+        
+        .footer-social {
+            gap: 20px;
+            margin: 24px 0;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            font-size: 1.6rem;
+            color: white;
+            text-decoration: none;
+            transition: all var(--transition-smooth);
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+        }
+        
+        .whatsapp { background: var(--whatsapp); }
+        .phone { background: #444; }
+        .facebook { background: #1877F2; }
+
+        footer {
+            background: var(--bg-darker);
+            padding: clamp(60px, 10vw, 80px) 0 40px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            margin-top: clamp(60px, 10vw, 80px);
+        }
+        
+        .footer-text {
+            font-size: clamp(1.1rem, 3vw, 1.2rem);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        footer p {
+            color: var(--text-light);
+            font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+        }
+        
+        footer a {
+            color: var(--text);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: var(--red);
+        }
+        
+        .copyright {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 920px) {
+            .main-nav { display: none; }
+            .mobile-menu-btn { display: block; }
+        }
+        
+        @media (max-width: 480px) {
+            .services-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+            .mobile-nav__link {
+                font-size: 1.3rem;
+                padding: 18px 20px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <!-- GEÄNDERT: Tel nr ohne +43 -->
+                <a href="tel:0257221182" style="color: inherit; text-decoration: none;"><i class="fas fa-phone"></i> 02572 211 82</a>
+                <a href="https://maps.google.com/?q=Hauptplatz+24,2130+Mistelbach" target="_blank" class="address-link" aria-label="Adresse in Google Maps öffnen">
+                    <i class="fas fa-map-marker-alt"></i> Hauptplatz 24, 2130 Mistelbach
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>HANDYSHOP</h1>
+                    <h2>Mistelbach</h2>
+                </div>
+
+                <nav class="main-nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#services" class="nav-link">Reparaturen</a>
+                    <a href="#contact" class="nav-link">Kontakt</a>
+                    <!-- GEÄNDERT: Tel nr ohne +43 -->
+                    <a href="tel:0257221182" class="phone-btn"><i class="fas fa-phone-alt"></i> Anrufen</a>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+                    <div class="mobile-menu-btn__lines">
+                        <span class="mobile-menu-btn__line"></span>
+                        <span class="mobile-menu-btn__line"></span>
+                        <span class="mobile-menu-btn__line"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+            <div class="mobile-nav__backdrop"></div>
+            <div class="mobile-nav__content">
+                <div class="mobile-nav__header">
+                    <div class="mobile-nav__brand">
+                        HANDYSHOP
+                        <span>Mistelbach</span>
+                    </div>
+                </div>
+
+                <nav aria-label="Mobile Navigation">
+                    <ul class="mobile-nav__links">
+                        <li class="mobile-nav__item">
+                            <a href="#home" class="mobile-nav__link">
+                                <span class="mobile-nav__link-text">Home</span>
+                                <span class="mobile-nav__link-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <a href="#services" class="mobile-nav__link">
+                                <span class="mobile-nav__link-text">Reparaturen</span>
+                                <span class="mobile-nav__link-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <a href="#contact" class="mobile-nav__link">
+                                <span class="mobile-nav__link-text">Kontakt</span>
+                                <span class="mobile-nav__link-arrow"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-nav__cta">
+                    <!-- GEÄNDERT: Tel nr ohne +43 -->
+                    <a href="tel:0257221182" class="mobile-nav__phone-btn">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Jetzt anrufen</span>
+                    </a>
+                </div>
+
+                <div class="mobile-nav__footer">
+                    <a href="https://maps.google.com/?q=Hauptplatz+24,2130+Mistelbach" target="_blank" class="mobile-nav__address-link" aria-label="Adresse in Google Maps öffnen">
+                        <p class="mobile-nav__address">
+                            Hauptplatz 24<br>
+                            2130 Mistelbach
+                        </p>
+                    </a>
+                    <p class="mobile-nav__hours">
+                        Mo–Fr 9:00–18:00 · Sa 9:00–14:00
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Schnelle Handy-Reparatur</h1>
+                <h2>iPhone · Samsung · Mistelbach</h2>
+
+                <div class="hero-features">
+                    <div class="feature"><i class="fas fa-bolt"></i> meist 30–60 Min</div>
+                    <div class="feature"><i class="fas fa-shield-alt"></i> 12 Monate Garantie</div>
+                    <div class="feature"><i class="fas fa-gem"></i> Originalteile</div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Anfahrt & Kontakt</a>
+                    <!-- GEÄNDERT: Tel nr ohne +43 -->
+                    <a href="tel:0257221182" class="btn btn-outline">Jetzt anrufen</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">Unsere Leistungen</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Display</h3>
+                        <p>30–60 Minuten</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fas fa-battery-full"></i></div>
+                        <h3>Akku</h3>
+                        <p>Neuer Akku</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fas fa-tint-slash"></i></div>
+                        <h3>Wasserschaden</h3>
+                        <p>Schnelle Trocknung</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Software</h3>
+                        <p>Update · Datenrettung</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Kontakt</h2>
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Adresse</h3>
+                        <p><a href="https://maps.google.com/?q=Hauptplatz+24,2130+Mistelbach" target="_blank" aria-label="Adresse in Google Maps öffnen">Hauptplatz 24<br>2130 Mistelbach</a></p>
+                    </article>
+                    <article class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <h3>Telefon</h3>
+                        <!-- GEÄNDERT: Tel nr ohne +43 -->
+                        <p><a href="tel:0257221182">02572 211 82</a></p>
+                    </article>
+                    <article class="contact-card">
+                        <div class="contact-icon"><i class="far fa-clock"></i></div>
+                        <h3>Öffnungszeiten</h3>
+                        <p>Mo–Fr 9:00–18:00<br>Sa 9:00–14:00</p>
+                    </article>
+                    <article class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3>Inhaber</h3>
+                        <p>Ulvi URTEKIN</p>
+                    </article>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://wa.me/436603200560" target="_blank" class="social-btn whatsapp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <!-- GEÄNDERT: Tel nr ohne +43 -->
+                    <a href="tel:0257221182" class="social-btn phone" aria-label="Anrufen">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://www.facebook.com/p/Handyshop-Mistelbach-100091530879284/" target="_blank" class="social-btn facebook" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">HANDYSHOP MISTELBACH – iPhone & Samsung Reparatur</p>
+            <p>Hauptplatz 24 · 2130 Mistelbach</p>
+            <div class="social-links footer-social">
+                <a href="https://wa.me/436603200560" target="_blank" class="social-btn whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <!-- GEÄNDERT: Tel nr ohne +43 -->
+                <a href="tel:0257221182" class="social-btn phone" aria-label="Anrufen"><i class="fas fa-phone"></i></a>
+                <a href="https://www.facebook.com/p/Handyshop-Mistelbach-100091530879284/" target="_blank" class="social-btn facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p class="copyright">© 2026 Ulvi URTEKIN</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            'use strict';
+            
+            const btnOpen = document.getElementById('mobileMenuBtn');
+            const nav = document.getElementById('mobileNav');
+            const body = document.body;
+            
+            if (!btnOpen || !nav) return;
+            
+            let isOpen = false;
+            let scrollY = 0;
+            
+            const openMenu = () => {
+                if (isOpen) return;
+                isOpen = true;
+                scrollY = window.scrollY;
+                
+                btnOpen.setAttribute('aria-expanded', 'true');
+                nav.setAttribute('aria-hidden', 'false');
+                nav.classList.add('active');
+                
+                body.style.top = `-${scrollY}px`;
+                body.classList.add('menu-open');
+            };
+            
+            const closeMenu = () => {
+                if (!isOpen) return;
+                isOpen = false;
+                
+                btnOpen.setAttribute('aria-expanded', 'false');
+                nav.setAttribute('aria-hidden', 'true');
+                nav.classList.remove('active');
+                
+                body.classList.remove('menu-open');
+                body.style.top = '';
+                window.scrollTo(0, scrollY);
+            };
+            
+            // Toggle Menu
+            btnOpen.addEventListener('click', () => {
+                isOpen ? closeMenu() : openMenu();
+            });
+            
+            // Navigation Links - NUR interne Links (#) schließen das Menü und verhindern Default
+            nav.addEventListener('click', (e) => {
+                const link = e.target.closest('a');
+                if (!link) return;
+                
+                const href = link.getAttribute('href');
+                
+                // Bei externen Links: Menue schliessen, aber KEIN preventDefault!
+                if (href && (href.startsWith('tel:') || href.startsWith('https://'))) {
+                    closeMenu();
+                    return;
+                }
+                
+                // Nur bei internen Anker-Links preventDefault
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    closeMenu();
+                    
+                    setTimeout(() => {
+                        const target = document.querySelector(href);
+                        if (target) {
+                            const headerOffset = 80;
+                            const elementPosition = target.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                            history.pushState(null, null, href);
+                        }
+                    }, 300);
+                }
+            });
+            
+            // Escape schliesst
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && isOpen) closeMenu();
+            });
+            
+            // Smooth Scroll fuer interne Links ausserhalb des Menus
+            document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+                if (anchor.closest('.mobile-nav')) return;
+                
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                        history.pushState(null, null, targetId);
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
